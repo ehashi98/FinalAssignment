@@ -25,6 +25,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name= ".loginActivity"/>
+        <activity android:name= ".loginPageActivity"/>
     </application>
 
 </manifest>
