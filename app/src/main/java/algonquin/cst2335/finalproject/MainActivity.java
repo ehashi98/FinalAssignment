@@ -14,6 +14,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.android.volley.RequestQueue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     List<ModelClass> teamList;
     Adapter adapter;
     Button login;
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -44,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item3:
                 Intent intent2 = new Intent(MainActivity.this, helpActivity.class);
                 startActivity(intent2);
+                return true;
+
+            case R.id.item4:
+                Intent intent3 = new Intent(MainActivity.this, volleyActivity.class);
+                startActivity(intent3);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
