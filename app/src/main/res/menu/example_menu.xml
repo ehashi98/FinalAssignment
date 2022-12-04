@@ -13,4 +13,9 @@
         android:title="Guled Nur"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/item3"
+        android:title="Help Menu"
+        app:showAsAction="never"/>
+
 </menu>
