@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -17,36 +16,33 @@ import java.util.ArrayList;
 
 import algonquin.cst2335.finalproject.databinding.ResultsActivityBinding;
 
-public class PexelsAdapter extends RecyclerView.Adapter<PexelsAdapter.RecyclerViewHolder> {
+public class PexelsSavedAdapter extends RecyclerView.Adapter<PexelsSavedAdapter.RecyclerViewHolder> {
     LayoutInflater inflater;
-    ArrayList<PexelsModel> pexelsResults;
-    PexelsViewModel pexelsModel;
+    ArrayList<PexelsSaved> pexelsSaved;
 
 
-    public PexelsAdapter(Context context, ArrayList<PexelsModel> pexelsResults) {
+    public PexelsSavedAdapter(Context context, ArrayList<PexelsSaved> pexelsSaved) {
         this.inflater = LayoutInflater.from(context);
-        this.pexelsResults = pexelsResults;
+        this.pexelsSaved = pexelsSaved;
     }
 
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ResultsActivityBinding binding = ResultsActivityBinding.inflate(LayoutInflater.from(parent.getContext()));
-        return new RecyclerViewHolder(binding.getRoot());
+        return new PexelsSavedAdapter.RecyclerViewHolder(binding.getRoot());
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
-        holder.photographer.setText(pexelsResults.get(position).getPhotographer());
-        Picasso.get().load(pexelsResults.get(position).getImgThumbnail()).into(holder.thumbnail);
+        holder.photographer.setText(pexelsSaved.get(position).getPhotographer());
+        Picasso.get().load(pexelsSaved.get(position).getImgThumbnail()).into(holder.thumbnail);
     }
 
     @Override
     public int getItemCount() {
-        return pexelsResults.size();
+        return 0;
     }
-
-
 
     class RecyclerViewHolder extends RecyclerView.ViewHolder {
         TextView photographer;
@@ -54,17 +50,9 @@ public class PexelsAdapter extends RecyclerView.Adapter<PexelsAdapter.RecyclerVi
 
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
-            pexelsModel = new PexelsViewModel();
-
-            itemView.setOnClickListener(click -> {
-                int position = getAdapterPosition();
-                PexelsModel selected = pexelsResults.get(position);;
-                pexelsModel.pexelsSelected.postValue(selected);
-            });
-
             photographer = itemView.findViewById(R.id.photogName);
             thumbnail = itemView.findViewById(R.id.thumbnail);
         }
     }
-}
 
+}

@@ -1,5 +1,6 @@
 package algonquin.cst2335.finalproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,8 +12,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -28,12 +32,32 @@ public class PexelsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     PexelsActivityBinding binding;
     ArrayList<PexelsModel> pexelsResults;
+    PexelsModel pexelsSelected;
     PexelsAdapter adapter;
     PexelsViewModel pexelsModel;
 
     String searchQuery;
     RequestQueue queue;
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.pexels_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch(item.getItemId()) {
+            case R.id.savedPexels:
+                Intent savedImgPage = new Intent(PexelsActivity.this, PexelsSavedActivity.class);
+                startActivity(savedImgPage);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +78,7 @@ public class PexelsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         adapter = new PexelsAdapter(getApplicationContext(), pexelsResults);
         recyclerView.setAdapter(adapter);
+
 
         binding.button.setOnClickListener(click -> {
             pexelsResults.clear();
@@ -77,7 +102,7 @@ public class PexelsActivity extends AppCompatActivity {
                                     result.setUrl(nextObj.getString("url"));
                                     result.setHeight(nextObj.getInt("height"));
                                     result.setWidth(nextObj.getInt("width"));
-                                    result.setImgThumbnail(nextObj.getJSONObject("src").get("small").toString());
+                                    result.setImgThumbnail(nextObj.getJSONObject("src").get("medium").toString());
                                     pexelsResults.add(result);
 
                                     adapter.notifyItemInserted(pexelsResults.size()-1);
@@ -105,5 +130,17 @@ public class PexelsActivity extends AppCompatActivity {
             };
             queue.add(request);
         });
+
+        pexelsModel.pexelsSelected.observe(this, (newValue) -> {
+            PexelsDetailsFragment imageFragment = new PexelsDetailsFragment(newValue);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragmentLocation, imageFragment)
+                    .addToBackStack("")
+                    .commit();
+        });
+
+        binding.recycleView.setLayoutManager(new LinearLayoutManager(this));
+
     }
 }
