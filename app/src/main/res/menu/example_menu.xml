@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/item2"
-        android:title="Guled Nur"
+        android:title="Fragment"
         app:showAsAction="never"/>
 
     <item

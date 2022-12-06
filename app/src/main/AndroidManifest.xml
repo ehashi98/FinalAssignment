@@ -31,6 +31,8 @@
         <activity android:name= ".loginPageActivity"/>
         <activity android:name= ".helpActivity"/>
         <activity android:name= ".volleyActivity"/>
+        <activity android:name= ".fragmentActivityPage"/>
+
     </application>
 
 </manifest>

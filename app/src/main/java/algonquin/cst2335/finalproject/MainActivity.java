@@ -3,6 +3,9 @@ package algonquin.cst2335.finalproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,38 +32,6 @@ public class MainActivity extends AppCompatActivity {
     Adapter adapter;
     Button login;
 
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.example_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.item2:
-            Intent intent = new Intent(MainActivity.this, MainActivity.class);
-            startActivity(intent);
-            return true;
-
-            case R.id.item3:
-                Intent intent2 = new Intent(MainActivity.this, helpActivity.class);
-                startActivity(intent2);
-                return true;
-
-            case R.id.item4:
-                Intent intent3 = new Intent(MainActivity.this, volleyActivity.class);
-                startActivity(intent3);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +53,40 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.example_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item1:
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+
+            case R.id.item2:
+                Intent intent2 = new Intent(MainActivity.this, fragmentActivityPage.class);
+                startActivity(intent2);
+                return true;
+
+            case R.id.item3:
+                Intent intent3 = new Intent(MainActivity.this, helpActivity.class);
+                startActivity(intent3);
+                return true;
+
+            case R.id.item4:
+                Intent intent4 = new Intent(MainActivity.this, volleyActivity.class);
+                startActivity(intent4);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
 
     }
 

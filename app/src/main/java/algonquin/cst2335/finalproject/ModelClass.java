@@ -45,4 +45,5 @@ public class ModelClass {
     public void setDivider(String divider) {
         this.divider = divider;
     }
+
 }
