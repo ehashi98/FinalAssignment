@@ -1,8 +1,5 @@
 package algonquin.cst2335.finalproject;
 
-import static android.content.Intent.getIntent;
-
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;

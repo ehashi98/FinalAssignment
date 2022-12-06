@@ -1,5 +1,16 @@
 package algonquin.cst2335.finalproject;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -11,12 +22,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -27,13 +33,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import algonquin.cst2335.finalproject.databinding.PexelsActivityBinding;
+import algonquin.cst2335.finalproject.databinding.ResultsActivityBinding;
 
 public class PexelsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     PexelsActivityBinding binding;
     ArrayList<PexelsModel> pexelsResults;
     PexelsModel pexelsSelected;
-    PexelsAdapter adapter;
+    RecyclerView.Adapter<RecyclerViewHolder> adapter;
     PexelsViewModel pexelsModel;
 
     String searchQuery;
@@ -50,7 +57,7 @@ public class PexelsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.savedPexels:
                 Intent savedImgPage = new Intent(PexelsActivity.this, PexelsSavedActivity.class);
                 startActivity(savedImgPage);
@@ -75,10 +82,6 @@ public class PexelsActivity extends AppCompatActivity {
             pexelsModel.pexelsResults.postValue(pexelsResults = new ArrayList<>());
         }
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        adapter = new PexelsAdapter(getApplicationContext(), pexelsResults);
-        recyclerView.setAdapter(adapter);
-
 
         binding.button.setOnClickListener(click -> {
             pexelsResults.clear();
@@ -102,10 +105,11 @@ public class PexelsActivity extends AppCompatActivity {
                                     result.setUrl(nextObj.getString("url"));
                                     result.setHeight(nextObj.getInt("height"));
                                     result.setWidth(nextObj.getInt("width"));
-                                    result.setImgThumbnail(nextObj.getJSONObject("src").get("medium").toString());
+                                    result.setImgThumbnail(nextObj.getJSONObject("src").get("small").toString());
+                                    result.setOriginalImg(nextObj.getJSONObject("src").get("original").toString());
                                     pexelsResults.add(result);
 
-                                    adapter.notifyItemInserted(pexelsResults.size()-1);
+                                    adapter.notifyItemInserted(pexelsResults.size() - 1);
 
                                 } catch (Exception e) {
                                     Log.d("test", "problem");
@@ -119,8 +123,7 @@ public class PexelsActivity extends AppCompatActivity {
                     },
                     (error) -> {
                         Log.e("Error", "error");
-                    })
-            {
+                    }) {
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError {
                     Map<String, String> params = new HashMap<String, String>();
@@ -131,16 +134,56 @@ public class PexelsActivity extends AppCompatActivity {
             queue.add(request);
         });
 
+        binding.recycleView.setAdapter(adapter = new RecyclerView.Adapter<RecyclerViewHolder>() {
+            @NonNull
+            @Override
+            public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                ResultsActivityBinding binding = ResultsActivityBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+                return new RecyclerViewHolder(binding.getRoot());
+            }
+
+            @Override
+            public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
+                PexelsModel img = pexelsResults.get(position);
+                holder.photographer.setText(img.getPhotographer());
+                Picasso.get().load(img.getImgThumbnail()).into(holder.thumbnail);
+            }
+
+            @Override
+            public int getItemCount() {
+                return pexelsResults.size();
+            }
+        });
+
         pexelsModel.pexelsSelected.observe(this, (newValue) -> {
-            PexelsDetailsFragment imageFragment = new PexelsDetailsFragment(newValue);
+            PexelsDetailsFragment pexelsFragment = new PexelsDetailsFragment(newValue);
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.fragmentLocation, imageFragment)
+                    .replace(R.id.fragmentLocation, pexelsFragment)
                     .addToBackStack("")
                     .commit();
         });
 
+
         binding.recycleView.setLayoutManager(new LinearLayoutManager(this));
 
+    }
+
+    class RecyclerViewHolder extends RecyclerView.ViewHolder {
+        TextView photographer;
+        ImageView thumbnail;
+
+
+        public RecyclerViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            itemView.setOnClickListener(click -> {
+                int position = getAdapterPosition();
+                PexelsModel selected = pexelsResults.get(position);
+                pexelsModel.pexelsSelected.postValue(selected);
+            });
+            photographer = itemView.findViewById(R.id.photogName);
+            thumbnail = itemView.findViewById(R.id.thumbnail);
+        }
     }
 }

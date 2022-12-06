@@ -1,7 +1,5 @@
 package algonquin.cst2335.finalproject;
 
-import android.graphics.Bitmap;
-
 public class PexelsModel {
     protected int id;
     protected int width;
