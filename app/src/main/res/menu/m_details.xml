@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/collectionDelete"
+        android:title="Close"
+        android:icon="@drawable/remove"
+        app:showAsAction="always"
+        android:tooltipText="Delete"
+        android:visibility="visible" />
+    <item
+        android:id="@+id/close_mdetails"
+        android:icon="@drawable/m_close"
+        android:title="close_mdetails"
+        android:visibility="visible"
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>

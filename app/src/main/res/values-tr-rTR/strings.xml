@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Final Grup Proje App</string>
+    <string name="dialog_message">Kapatmak istiyor musun?</string>
+    <string name="help_title">Nasıl Çalışıyor?</string>
+    <string name="howto_message">Hoşgeldiniz! \n\nKolayca aradığınız filmi yazın ve butona basın.
+    \n\nAradığınız filmi listenize ekleyip, listenize ve film detaylarına + butonuna basarak ulaşın.</string>
+
+    <string name ="lib_help_title">Yardım: </string>
+
+    <string name="lib_help_message">
+        Bu sayfa kaydettiğiniz filmleri bulunduruyor..
+        \n\nEğer kaydettiğiniz film hakkında bilgi almak isterseniz,
+        kaydettiğiniz filme tıklayarak buna ulaşabilirsiniz.
+        \n\nEğer bir filmi silmek isterseniz, filme tıklayın, bu sayfaya geri dönün,
+        ve çöp sembolüne tıklayın, çıkan soruda silmek isteyip istemediğinize göre yanıtlayın.
+    </string>
+
+    <string name="open">Aç</string>
+    <string name="close">kapat</string>
+    <string name="author">Yazar:</string>
+    <string name="details">Detay
+    \nSayfası</string>
+
+    <string name="save">kaydet</string>
+    <string name="remove">çıkar</string>
+    <string name="search">ara</string>
+
+    <string name="MovieMainPageHeader">Film Bilgilendirme Uygulamasına Hoşgeldiniz!</string>
+    <string name="MovieSearch">Ara</string>
+    <string name="ToMovieList">Kaydedilen Filmler</string>
+
+    <string name="released"><font color="red"> Yayınlanma Tarihi:</font></string>
+    <string name="runtime">Süre: </string>
+    <string name="cast">Oyuncular: </string>
+    <string name="plot">Konusu: </string>
+
+
+    <string name="about">Hakkında</string>
+</resources>
