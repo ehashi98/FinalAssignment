@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class loginActivity extends AppCompatActivity {
 
+    /**
+     * Parameter.
+     */
     EditText ETemail, et;
     Button login;
     SharedPreferences sp;
@@ -32,6 +35,10 @@ public class loginActivity extends AppCompatActivity {
 
         sp = getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
 
+        /**
+         * This button runs the password check and
+         * for inputting the email.
+         */
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +57,10 @@ public class loginActivity extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * This is the logic for checcking the password complexity.
+     */
     public void checkPasswordComplexity(String password) {
 
         char ch;
@@ -81,6 +92,10 @@ public class loginActivity extends AppCompatActivity {
             }
 
         }
+
+        /**
+         * This displays the toast messages.
+         */
         if(!foundUpperCase)
         {
             Toast.makeText(loginActivity.this,"Missing an Upper case letter",Toast.LENGTH_SHORT).show();

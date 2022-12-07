@@ -12,6 +12,9 @@ public class FragmentActivity extends Fragment {
 
     View view;
 
+    /**
+     * This is for setting up the fragmentation.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

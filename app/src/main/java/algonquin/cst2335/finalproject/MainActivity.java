@@ -26,6 +26,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Parameter
+     */
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     List<ModelClass> teamList;
@@ -45,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         initData();
         initRecyclerView();
 
+        /**
+         * This button will take you to the login page.
+         */
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,12 +62,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This creates the drop down menu
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.example_menu, menu);
         return true;
     }
+
+    /**
+     * These are the clickable activities in the menu.
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -95,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Parameter
+     */
     private void initData() {
 
         teamList = new ArrayList<>();

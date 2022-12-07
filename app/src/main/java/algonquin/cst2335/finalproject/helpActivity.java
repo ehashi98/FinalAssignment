@@ -7,8 +7,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class helpActivity extends AppCompatActivity {
 
+    /**
+     * This stores the data.
+     */
     TextView textView1, textView2, textView3;
 
+    /**
+     * This help information.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

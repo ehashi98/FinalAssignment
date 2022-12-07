@@ -11,6 +11,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class fragmentActivityPage extends AppCompatActivity {
 
+    /**
+     * Parameters
+     */
     Button winLose;
 
     @Override
@@ -20,6 +23,9 @@ public class fragmentActivityPage extends AppCompatActivity {
 
         winLose = findViewById(R.id.recode);
 
+        /**
+         * Button for going to the fragment page.
+         */
         winLose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +34,10 @@ public class fragmentActivityPage extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * This replaces the current page with the fragment page.
+     */
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

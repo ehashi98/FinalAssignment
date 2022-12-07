@@ -16,10 +16,16 @@ import java.util.ArrayList;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> {
 
+    /**
+     * Parameters
+     */
     private Context context;
     Activity activity;
     private ArrayList columnID, playerName, playerTeam, playerPosition;
 
+    /**
+     * Constructor
+     */
     DataAdapter(Activity activity, Context context, ArrayList columnID, ArrayList playerName, ArrayList playerTeam,
                 ArrayList playerPosition){
         this.activity = activity;
@@ -39,6 +45,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
         return new MyViewHolder(view);
     }
 
+    /**
+     * This gets the text that is typed by the user.
+     */
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.playerIDText.setText(String.valueOf(columnID.get(position)));
@@ -46,6 +55,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
         holder.playerTeamText.setText(String.valueOf(playerTeam.get(position)));
         holder.playerPositionText.setText(String.valueOf(playerPosition.get(position)));
 
+        /**
+         * This add the text from the user into the database.
+         */
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,11 +71,17 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
         });
     }
 
+    /**
+     * This counts the number of columns
+     */
     @Override
     public int getItemCount() {
         return columnID.size();
     }
 
+    /**
+     * This adds the information into the recyclerview.
+     */
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView playerIDText, playerNameText, playerTeamText, playerPositionText;

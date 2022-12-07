@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class loginPageActivity extends AppCompatActivity {
 
+    /**
+     * Parameter
+     */
     Button button;
 
     @Override
@@ -22,6 +25,9 @@ public class loginPageActivity extends AppCompatActivity {
         TextView t1;
         t1 = findViewById(R.id.textView);
 
+        /**
+         * This keeps the email on the page.
+         */
         SharedPreferences sp = getApplicationContext().getSharedPreferences("MyUserPrefs", Context.MODE_PRIVATE);
         String email = sp.getString("email", "");
 
@@ -29,6 +35,9 @@ public class loginPageActivity extends AppCompatActivity {
 
         button = findViewById(R.id.teampage);
 
+        /**
+         * This button takes you back to the main layout
+         */
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

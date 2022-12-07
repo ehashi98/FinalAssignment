@@ -10,6 +10,9 @@ import android.widget.EditText;
 
 public class addActivity extends AppCompatActivity {
 
+    /**
+     * Parameters
+     */
     EditText nameInput, teamInput, positionInput;
     Button addButton, addPlayerButton;
 
@@ -24,6 +27,9 @@ public class addActivity extends AppCompatActivity {
         addButton = findViewById(R.id.addButton);
         addPlayerButton = findViewById(R.id.addPlayerButton);
 
+        /**
+         * This button is for adding new objects to the team database.
+         */
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +40,9 @@ public class addActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * This button is for returning to the databaseActivity layout.
+         */
         addPlayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

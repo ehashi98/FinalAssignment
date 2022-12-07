@@ -21,6 +21,9 @@ import java.util.ArrayList;
 
 public class databaseActivity extends AppCompatActivity {
 
+    /*
+     * Parameters
+     */
     RecyclerView recyclerView;
     FloatingActionButton add_button;
 
@@ -36,6 +39,9 @@ public class databaseActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.database);
         add_button = findViewById(R.id.add_button);
 
+        /*
+         * This button takes you to the add layout.
+         */
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,14 +50,23 @@ public class databaseActivity extends AppCompatActivity {
             }
         });
 
+        /*
+         * This creates a new database and the separate array lists for each variable.
+         */
         myDB = new MyDatabase(databaseActivity.this);
         columnID = new ArrayList<>();
         playerName = new ArrayList<>();
         playerTeam = new ArrayList<>();
         playerPosition = new ArrayList<>();
 
+        /*
+         * This stores the data.
+         */
         storeDataInArrays();
 
+        /*
+         * This adds the information to the recycle view.
+         */
         dataAdapter = new DataAdapter(databaseActivity.this, this, columnID, playerName, playerTeam, playerPosition);
         recyclerView.setAdapter(dataAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(databaseActivity.this));
@@ -66,6 +81,11 @@ public class databaseActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This stores the data in the array lists and places them in the
+     * correct columns.
+     * If there is no data, there is a toast message displayed.
+     */
     void storeDataInArrays(){
         Cursor cursor = myDB.readAllData();
         if(cursor.getCount() == 0){

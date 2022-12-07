@@ -14,6 +14,9 @@ import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
+    /**
+    * Parameter
+    */
     private List<ModelClass> teamList;
 
     public Adapter(List<ModelClass>teamList){
@@ -43,6 +46,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
         return teamList.size();
     }
 
+    /**
+     * This is for creating the recycler view
+     */
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imageView1;
