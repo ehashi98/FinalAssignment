@@ -1,32 +1,25 @@
 package algonquin.cst2335.finalproject;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import algonquin.cst2335.finalproject.databinding.PexelsSavedBinding;
-import algonquin.cst2335.finalproject.databinding.ResultsActivityBinding;
 import algonquin.cst2335.finalproject.databinding.SavedActivityBinding;
 
 public class PexelsSavedActivity extends AppCompatActivity {
@@ -77,7 +70,7 @@ public class PexelsSavedActivity extends AppCompatActivity {
             public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
                 PexelsModel img = pexelsSaved.get(position);
                 holder.photographer.setText(img.getPhotographer());
-                Picasso.get().load(img.getImgThumbnail()).into(holder.thumbnail);
+                Glide.with(getApplicationContext()).load(img.getImgThumbnail()).into(holder.thumbnail);
             }
 
             @Override

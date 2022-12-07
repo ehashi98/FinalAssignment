@@ -23,7 +23,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -142,7 +142,8 @@ public class PexelsActivity extends AppCompatActivity {
             public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
                 PexelsModel img = pexelsResults.get(position);
                 holder.photographer.setText(img.getPhotographer());
-                Picasso.get().load(img.getImgThumbnail()).into(holder.thumbnail);
+                Glide.with(getApplicationContext()).load(img.getImgThumbnail()).into(holder.thumbnail);
+
             }
 
             /**
