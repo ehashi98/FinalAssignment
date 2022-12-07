@@ -12,8 +12,6 @@
     <string name="create3">2) Click on the oblect in the database to update it.</string>
     <string name="create4">3) Click on the delete button to remove the object.</string>
 
-    <string name="app_name">Final Group Project Application</string>
-
     <string name="details">Information Page</string>
 
     <string name="help_title">How it works?</string>
@@ -38,9 +36,9 @@
 
     <string name="author">Author:</string>
 
-    <string name="save">save</string>
-    <string name="remove">remove</string>
-    <string name="search">search</string>
+    <string name="saveMovie">save</string>
+    <string name="removeMovie">remove</string>
+    <string name="searchMovie">search</string>
 
     <string name="MovieMainPageHeader">Welcome to \nMovie Information App </string>
     <string name="MovieSearch">Search</string>
@@ -52,15 +50,15 @@
     <string name="cast">The Cast: </string>
     <string name="plot">The Plot: </string>
 
-    <string name="about">About</string>
+    <string name="aboutMovie">About</string>
 
 
     <string name="enter_search_here">Enter Search Here</string>
-    <string name="search">Search</string>
-    <string name="save">Save</string>
+    <string name="searchImg">Search</string>
+    <string name="saveImg">Save</string>
     <string name="image_thumbnail">Image thumbnail</string>
     <string name="saved_images">Saved Images</string>
-    <string name="about">About</string>
+    <string name="aboutImg">About</string>
     <string name="ticket_master_name">Welcome to Ticket Master Project</string>
     <string name="search">Search</string>
     <string name="radius_km">Radius (km)</string>
@@ -89,7 +87,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="undo">Undo</string>
-    <string name="app_name">CST2335 Ticket Master Project</string>
+    <string name="app_nameTicket">CST2335 Ticket Master Project</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="time">time</string>

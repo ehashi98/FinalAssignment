@@ -5,16 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.google.android.material.navigation.NavigationView;
+import View.SearchMovie;
 
-public class MainActivity extends AppCompatActivity {
+public class SoccerActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -29,22 +27,25 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())  {
             case R.id.pexel:
-                Intent pexel = new Intent( MainActivity.this, Pexel.class );
+                Intent pexel = new Intent( MainActivity.this, PexelsActivity.class );
                 startActivity( pexel );
                 break;
+
             case R.id.movie:
-                Intent movie=new Intent(MainActivity.this,MovieI.class);
+                Intent movie=new Intent(MainActivity.this, SearchMovie.class);
                 startActivity(movie);
-
                 break;
+
             case R.id.soccer:
-                Intent soccer = new Intent( MainActivity.this, Soccer.class );
+                Intent soccer = new Intent( MainActivity.this, SoccerActivity.class );
                 startActivity( soccer );
+                break;
 
-                break;
             case R.id.ticket:
-                Toast.makeText(this, "TICKET MASTER", Toast.LENGTH_LONG).show();
+                Intent ticket = new Intent( MainActivity.this, TicketHomeActivity.class );
+                startActivity( ticket );
                 break;
+
         }
         return true;
     }

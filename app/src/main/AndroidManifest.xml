@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,38 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalGroupProjectApplication"
-        android:theme="@style/Theme.TicketMaster"
         tools:targetApi="31">
 
-        <activity
-            android:name=".addActivity"
-            android:label="Add Player"
-            android:parentActivityName=".databaseActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
 
         <activity
             android:name=".MainActivity"
-            android:name="View.MovieLib"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true">
-
-        </activity>
-
-        <activity
-            android:name="View.SearchMovie"
-            android:name="PexelsSavedActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".PexelsActivity"
-            android:name=".TicketHomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,6 +27,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".addActivity"
+            android:label="Add Player"
+            android:parentActivityName=".databaseActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name="View.SearchMovie"
+
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="View.MovieLib"
+
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name="SoccerActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".TicketHomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name="PexelsSavedActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".PexelsActivity"
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".ui.TicketMasterActivity"
             android:exported="true">

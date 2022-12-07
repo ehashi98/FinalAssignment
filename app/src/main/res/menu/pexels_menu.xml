@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/about"
-        android:title="@string/about"
+        android:title="@string/aboutImg"
         app:showAsAction="never" />
 
 </menu>

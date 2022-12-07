@@ -22,7 +22,7 @@
 
          <item
         android:id="@+id/about"
-        android:title="@string/about"
+        android:title="@string/aboutMovie"
         android:icon="@drawable/about"
         app:showAsAction="always"
         android:orderInCategory="3"
