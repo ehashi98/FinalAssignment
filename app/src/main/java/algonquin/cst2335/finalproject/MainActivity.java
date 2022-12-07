@@ -84,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent4 = new Intent(MainActivity.this, volleyActivity.class);
                 startActivity(intent4);
                 return true;
+
+            case R.id.item5:
+                Intent intent5 = new Intent(MainActivity.this, databaseActivity.class);
+                startActivity(intent5);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
