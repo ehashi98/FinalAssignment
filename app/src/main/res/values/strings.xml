@@ -55,4 +55,10 @@
     <string name="about">About</string>
 
 
+    <string name="enter_search_here">Enter Search Here</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="image_thumbnail">Image thumbnail</string>
+    <string name="saved_images">Saved Images</string>
+    <string name="about">About</string>
 </resources>
