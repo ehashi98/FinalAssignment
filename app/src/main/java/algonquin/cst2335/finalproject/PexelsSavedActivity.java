@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
@@ -33,8 +35,6 @@ public class PexelsSavedActivity extends AppCompatActivity {
     RecyclerView.Adapter<PexelsSavedActivity.RecyclerViewHolder> adapter;
 
     PexelsSavedDAO pDAO;
-
-    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,10 +80,10 @@ public class PexelsSavedActivity extends AppCompatActivity {
 
         });
 
-/*        pexelsModel.pexelsSelected.observe(this, (newValue) -> {
+        pexelsModel.pexelsSelected.observe(this, (newValue) -> {
             PexelsDetailsFragment pexelsFragment = new PexelsDetailsFragment(newValue);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLocation, pexelsFragment).addToBackStack("").commit();
-        });*/
+        });
 
         binding.recycleView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -97,7 +97,7 @@ public class PexelsSavedActivity extends AppCompatActivity {
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            /*itemView.setOnClickListener(click -> {
+            itemView.setOnClickListener(click -> {
                 final int position = getAdapterPosition();
                 AlertDialog.Builder builder = new AlertDialog.Builder(PexelsSavedActivity.this);
                 PexelsModel img = pexelsSaved.get(position);
@@ -110,7 +110,7 @@ public class PexelsSavedActivity extends AppCompatActivity {
                                         thread.execute(() -> {
                                             pDAO.saveImage(img);
                                         });
-                                        pexelsModel.pexelsSaved.getValue().add(img);
+                                        pexelsModel.pexelsSaved.getValue().add(position, img);
                                         adapter.notifyItemInserted(position);
                                     })
                                     .show();
@@ -124,7 +124,7 @@ public class PexelsSavedActivity extends AppCompatActivity {
                         .setNegativeButton("No", (dialog, cl) -> { })
                         .create()
                         .show();
-            });*/
+            });
 
             photographer = itemView.findViewById(R.id.photogName);
             thumbnail = itemView.findViewById(R.id.thumbnail);

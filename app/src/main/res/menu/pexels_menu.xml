@@ -6,7 +6,12 @@
         android:id="@+id/savedPexels"
         android:title="@string/saved_images"
         app:showAsAction="never" />
-    
+
+    <item
+        android:id="@+id/help"
+        android:title="Help"
+        app:showAsAction="never"/>
+
     <item
         android:id="@+id/about"
         android:title="@string/about"
