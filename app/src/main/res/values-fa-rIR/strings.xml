@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ticket_master_name">تیکت مستر</string>
+    <string name="search">جستجو</string>
+    <string name="radius_km">فاصله (کیلومتر)</string>
+    <string name="city">شهر</string>
+    <string name="name">نام</string>
+    <string name="date">تاریخ</string>
+    <string name="event_name">نام مناسبت</string>
+    <string name="event_date">تاریخ مناسبت</string>
+    <string name="event_venue">مکان برگزاری</string>
+    <string name="ticket_price">قیمت بلیط</string>
+    <string name="buy_ticket">خرید بلیط</string>
+    <string name="save">ذخیره</string>
+    <string name="remove">حذف</string>
+    <string name="show_result">مناسبت  %s در حدود %d km: </string>
+    <string name="no_result">هیچ مناسبتی وجود ندارد! %s در این فاصله %d km!</string>
+    <string name="invalid_city">لطفا شهر مورد نظر را انتخاب کنید</string>
+    <string name="no_radius">لطفا فاصله را وارد کنید</string>
+    <string name="zero_radius">فاصله باید بیشتر از 0 باشد!</string>
+    <string name="delete_warning">میخواهید مناسبت را حذف کنید؟</string>
+    <string name="deleted_message">مناسبت مورد نظر حذف شد %s</string>
+    <string name="show_favorite">لیست مورد علاقه:</string>
+    <string name="saved_to_favorite">به لیست مورد علاقه شما اضافه شد!</string>
+    <string name="failed_to_save">ذخیره موفق نبود. لطفا دوباره سعی کنید!</string>
+    <string name="event_exists">مناسبت مورد نظر قبلا در لیست شما ذخیره شده</string>
+    <string name="question">سوالات:</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="undo">بازگردانی</string>
+    <string name="app_name"> پروژه نهایی تیکت مسترCST2335 </string>
+    <string name="drawer_open">بازکردن زبانه</string>
+    <string name="drawer_close">بستن زبانه</string>
+    <string name="time">زمان</string>
+    <string name="eventAddress">آدرس مناسبت</string>
+    <string name="ok">باشه</string>
+    <string name="Usage">چگونه از این اپلیکیشن استفاده کنیم؟</string>
+    <string name="helpMessage">شهر و فاصله مورد نظر خود را انتخاب کنید..%nمناسبت مورد نظر را انتخاب کنید.%nنظرتون رو پر مورد مناسبت انتخابی عوض کردید؟ نگران نباشید دکمه حذف برای کمک به شما تعبیه شده.</string>
+
+    <string name="homepage">صفحه اصلی</string>
+</resources>

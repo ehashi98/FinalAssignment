@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#ffffff">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageview"
+            app:cardCornerRadius="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp">
+            
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/imageView1"
+                android:src="@drawable/realmadrid">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="205dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/imageview"
+            android:text="Real Madrid C.F."
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="--------------------------------------------------------------------------------"
+            android:textColor="@color/black"
+            android:id="@+id/textViewLine"
+            android:layout_marginTop="-5dp"
+            android:layout_toRightOf="@id/imageview"
+            android:layout_below="@id/imageview"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/textView"
+            android:text="*"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
