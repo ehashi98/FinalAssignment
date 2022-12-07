@@ -28,6 +28,7 @@
                 android:value="" />
         </activity>
         <activity android:name= ".loginActivity"/>
+        <activity android:name= ".MatchActivity"/>
         <activity android:name= ".loginPageActivity"/>
         <activity android:name= ".helpActivity"/>
         <activity android:name= ".volleyActivity"/>
