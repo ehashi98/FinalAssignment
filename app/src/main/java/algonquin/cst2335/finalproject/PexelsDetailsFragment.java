@@ -42,28 +42,12 @@ public class PexelsDetailsFragment extends Fragment {
         binding.imgUrl.setText(pexelsImage.getUrl());
         binding.imgWidth.setText(String.valueOf(pexelsImage.getWidth()));
         binding.imgHeight.setText(String.valueOf(pexelsImage.getHeight()));
-        //try {
-            Glide.with(getContext()).load(pexelsImage.getOriginalImg()).into(binding.selectedImg);
-            /*Picasso.get()
-                    .load(pexelsImage.getOriginalImg())
-                    .into(binding.selectedImg);
-        } catch (RuntimeException e) {
-            Log.d("test", "image too big being shrunk");
-            Picasso.get().load(pexelsImage.getImgThumbnail()).into(binding.selectedImg);
-        }*/
-
-       /* TextView imgUrl = binding.imgUrl;
-        imgUrl.setOnClickListener(v -> {
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse(String.valueOf(binding.imgUrl)));
-            startActivity(intent);
-        });*/
+        Glide.with(getContext()).load(pexelsImage.getOriginalImg()).into(binding.selectedImg);
 
         Button saveBtn = binding.saveImg;
         saveBtn.setOnClickListener(v -> {
             try {
+                saveBtn.setEnabled(false);
                 Toast.makeText(getContext(), "Image saved", Toast.LENGTH_SHORT).show();
                 Executor thread = Executors.newSingleThreadExecutor();
                 thread.execute(() -> {
