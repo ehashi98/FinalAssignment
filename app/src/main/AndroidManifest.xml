@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FinalProject"
+        android:theme="@style/Theme.FinalGroupProjectApplication"
         tools:targetApi="31">
         <activity
             android:name=".addActivity"
@@ -25,6 +25,14 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:name="View.MovieLib"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name="View.SearchMovie"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addedList"
+        android:title="addedList"
+        android:orderInCategory="1"
+        android:icon="@drawable/addplussign"
+        app:showAsAction="always"
+        android:tooltipText="addedList"
+        android:visibility="visible" />
+
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@drawable/howto"
+        android:title="menu_help"
+        android:visibility="visible"
+        android:visible="true"
+        app:showAsAction="always"
+        android:orderInCategory="2"/>
+
+         <item
+        android:id="@+id/about"
+        android:title="@string/about"
+        android:icon="@drawable/about"
+        app:showAsAction="always"
+        android:orderInCategory="3"
+        />
+
+
+</menu>

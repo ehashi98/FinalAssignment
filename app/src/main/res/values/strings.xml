@@ -12,4 +12,47 @@
     <string name="create3">2) Click on the oblect in the database to update it.</string>
     <string name="create4">3) Click on the delete button to remove the object.</string>
 
+    <string name="app_name">Final Group Project Application</string>
+
+    <string name="details">Information Page</string>
+
+    <string name="help_title">How it works?</string>
+
+    <string name="howto_message">Welcome to Movie Information app!
+    \n\nSimply enter the movie name you wish to search for in order to get
+    the movies under that name and information about the movie you want.
+    \n\nIf you wish to see details, just add one movie of your choice to
+        your library, and you can have access to it
+    after you click the + sign at the top!</string>
+
+    <string name ="lib_help_title">Help: </string>
+    <string name="lib_help_message">
+        This page stores all your saved movies.
+        \n\nIf you wish to see details about a movie you have saved, you can see by
+        clicking on the movie.
+        \n\nIf you wish to delete a movie, click on the movie, come back to this page,
+        and click on the garbage icon, choose whether you want to delete or not.
+    </string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+    <string name="author">Author:</string>
+
+    <string name="save">save</string>
+    <string name="remove">remove</string>
+    <string name="search">search</string>
+
+    <string name="MovieMainPageHeader">Welcome to \nMovie Information App </string>
+    <string name="MovieSearch">Search</string>
+    <string name="ToMovieList">Saved Movies</string>
+
+
+    <string name="released">Released On: </string>
+    <string name="runtime">Runtime: </string>
+    <string name="cast">The Cast: </string>
+    <string name="plot">The Plot: </string>
+
+    <string name="about">About</string>
+
+
 </resources>
