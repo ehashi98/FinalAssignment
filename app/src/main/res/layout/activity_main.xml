@@ -1,60 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#7AD1746D">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"/>
 
-    <FrameLayout
-        android:id="@+id/framelayout"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="306dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="48dp"
+        android:text="Welcome to TicketMaster"
+        android:textColor="#06070C"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/recode"
+    <TextView
+        android:id="@+id/ticketmasterInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="226dp"
-        android:layout_marginBottom="8dp"
-        android:text="Win-Lose"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
-        app:layout_constraintEnd_toStartOf="@+id/recyclerview"
-        app:layout_constraintHorizontal_bias="0.374"
-        app:layout_constraintStart_toEndOf="@+id/recyclerview"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
-        app:layout_constraintVertical_bias="0.061" />
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="92dp"
+        android:textStyle="bold"
+        android:text="Author:Kamelia Pezeshki"
+        android:textSize="20sp"
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginTop="-4dp"
-        tools:layout_editor_absoluteX="73dp" />
-
-    <Button
-        android:id="@+id/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/ticketmasterInfo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="6dp"
-        android:text="Sign up"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
-        app:layout_constraintEnd_toStartOf="@+id/recyclerview"
-        app:layout_constraintHorizontal_bias="0.374"
-        app:layout_constraintStart_toEndOf="@+id/recyclerview"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
-        app:layout_constraintVertical_bias="0.061" />
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="92dp"
+        android:text="Version 1.0"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ticketmasterInfo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="238dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/m" />
 
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

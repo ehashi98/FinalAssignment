@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-    
-    <uses-permission android:name="android.permission.INTERNET"/>
+    xmlns:tools="http://schemas.android.com/tools"
+    package="algonquin.cst2335.ticketmaster">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FinalProject"
+        android:theme="@style/Theme.TicketMaster"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
@@ -22,16 +23,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
-        <activity android:name= ".loginActivity"/>
-        <activity android:name= ".loginPageActivity"/>
-        <activity android:name= ".helpActivity"/>
-        <activity android:name= ".volleyActivity"/>
-        <activity android:name= ".fragmentActivityPage"/>
+        <activity
+            android:name=".ui.TicketMasterActivity"
+            android:exported="true">
+            <intent-filter>
+
+                <action android:name="com.dsociety.activities.MyBrowser" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
 
     </application>
 
