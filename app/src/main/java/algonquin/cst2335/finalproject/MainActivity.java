@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Parameter
+     * This will load the team information to the main layout recycler view.
      */
     private void initData() {
 
@@ -126,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This initiates the recycler view.
+     */
     private void initRecyclerView() {
 
         recyclerView = findViewById(R.id.recyclerview);

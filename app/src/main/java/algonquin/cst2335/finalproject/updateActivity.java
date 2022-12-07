@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class updateActivity extends AppCompatActivity {
 
+    /**
+     * Parameter
+     */
     EditText nameInput, teamInput, positionInput;
     Button updateButton, updatePlayerButton, deleteButton;
 
@@ -34,6 +37,10 @@ public class updateActivity extends AppCompatActivity {
         //First we call this
         getAndSetIntentData();
 
+        /**
+         * This takes the information that was added,
+         * changes it, and updates it with the new information.
+         */
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +53,9 @@ public class updateActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * This button takes you back to databaseActivity layout.
+         */
         updatePlayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +64,9 @@ public class updateActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * This button deletes the added or updated objects.
+         */
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +76,10 @@ public class updateActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This gets and sets the data that is going to be updated
+     * and displays a toast message.
+     */
     void getAndSetIntentData(){
         if(getIntent().hasExtra("ID") && getIntent().hasExtra("Name") &&
                 getIntent().hasExtra("Team") && getIntent().hasExtra("Position")){
@@ -82,6 +99,10 @@ public class updateActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This gives you a chance to double check if you want ot
+     * delete the object from the database.
+     */
     void confirmDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete " + name + " ?");
@@ -94,6 +115,7 @@ public class updateActivity extends AppCompatActivity {
                 finish();
             }
         });
+
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

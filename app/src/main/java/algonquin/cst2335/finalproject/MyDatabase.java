@@ -11,6 +11,9 @@ import androidx.annotation.Nullable;
 
 public class MyDatabase extends SQLiteOpenHelper {
 
+    /**
+     * Parameter
+     */
     private Context context;
     private static final String DATABASE_NAME = "Playerlibrary.db";
     private static final int DATABASE_VERSION = 1;
@@ -28,6 +31,10 @@ public class MyDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+        /**
+         * This creates our table for the database.
+         */
         String query = "CREATE TABLE " + TABLE_NAME +
                         " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                         PLAYER_NAME + " TEXT, " +
@@ -37,12 +44,19 @@ public class MyDatabase extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * this lets us create new tables as needed.
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 
+    /**
+     * This is for adding new objects into the database
+     * and displays toast messages.
+     */
     void addPlayer(String name, String team, String position){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -58,6 +72,9 @@ public class MyDatabase extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * This reads all the data from the table.
+     */
     Cursor readAllData(){
        String query = "SELECT * FROM " + TABLE_NAME;
        SQLiteDatabase db = this.getReadableDatabase();
@@ -69,6 +86,10 @@ public class MyDatabase extends SQLiteOpenHelper {
        return cursor;
     }
 
+    /**
+     * This lets you update the added objects and
+     * displays the toast messages.
+     */
     void updateData(String row_id, String name, String team, String position){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -84,6 +105,10 @@ public class MyDatabase extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * This lets you delete the added objects and
+     * displays the toast messages.
+     */
     void deleteOneRow(String row_id){
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, "_id=?", new String[]{row_id});

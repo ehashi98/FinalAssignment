@@ -2,6 +2,9 @@ package algonquin.cst2335.finalproject;
 
 public class ModelClass {
 
+    /**
+     * Parameter
+     */
     private int imageView1;
     private String textView;
     private String button;
@@ -14,6 +17,9 @@ public class ModelClass {
         this.divider = divider;
     }
 
+    /**
+     * Getters and setter for the design of the main activity recycler view.
+     */
     public int getImageView1() {
         return imageView1;
     }

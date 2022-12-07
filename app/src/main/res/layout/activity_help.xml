@@ -35,4 +35,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSigninHelp2"
         tools:text="2) Enter an Email name and a password with at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol" />
+
+    <TextView
+        android:id="@+id/playerCreateHelp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Player Creation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSigninHelp3" />
+
+    <TextView
+        android:id="@+id/playerCreateHelp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="1) Click on the button to add a new player."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerCreateHelp1" />
+
+    <TextView
+        android:id="@+id/playerCreateHelp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="2) Click on the oblect in the database to update it."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerCreateHelp2" />
+
+    <TextView
+        android:id="@+id/playerCreateHelp4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="3) Click on the delete button to remove the object."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerCreateHelp3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

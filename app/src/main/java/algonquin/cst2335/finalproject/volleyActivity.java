@@ -20,6 +20,9 @@ import org.json.JSONObject;
 
 public class volleyActivity extends AppCompatActivity {
 
+    /**
+     * Parameter
+     */
     private TextView mTextViewResult;
     private RequestQueue mQueue;
 
@@ -33,6 +36,9 @@ public class volleyActivity extends AppCompatActivity {
 
         mQueue = Volley.newRequestQueue(this);
 
+        /**
+         * This button is for displaying the information on the JSON link.
+         */
         buttonParse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +48,10 @@ public class volleyActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This method is for displaying the JSON data in the right order
+     * and gets the information from the website.
+     */
     private void jsonParse() {
         String url = "https://api.jsonserve.com/jjoK-4";
 
@@ -73,6 +83,9 @@ public class volleyActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * This adds the JSON data it to the layout.
+         */
         mQueue.add(request);
     }
 }
