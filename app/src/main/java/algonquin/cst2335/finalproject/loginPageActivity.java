@@ -42,7 +42,7 @@ public class loginPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(loginPageActivity.this, MainActivity.class);
+                Intent intent = new Intent(loginPageActivity.this, MatchActivity.class);
                 startActivity(intent);
             }
         });
