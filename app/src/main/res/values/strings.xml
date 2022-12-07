@@ -2,4 +2,14 @@
     <string name="app_name">Final Project</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_message">Hello World</string>
+    <string name="Sign_in1">Sign in Help</string>
+    <string name="Sign_in2">1) Click on the SIgn-in button</string>
+    <string name="Sign_in3">2) Enter an Email name and a password with at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol</string>
+
+    <string name="create1">Player Creation</string>
+    <string name="create2">1) Click on the button to add a new player.</string>
+    <string name="create3">2) Click on the oblect in the database to update it.</string>
+    <string name="create4">3) Click on the delete button to remove the object.</string>
+
 </resources>

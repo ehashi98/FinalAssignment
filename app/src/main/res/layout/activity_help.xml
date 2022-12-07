@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Sign in Help"
+        android:text="@string/Sign_in1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Sign in Help" />
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="1) Click on the SIgn-in button"
+        android:text="@string/Sign_in2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSigninHelp1"
         tools:text="1) Click on the SIgn-in button" />
@@ -31,7 +31,7 @@
         android:layout_width="381dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
-        android:text="2) Enter an Email name and a password with at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol"
+        android:text="@string/Sign_in3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSigninHelp2"
         tools:text="2) Enter an Email name and a password with at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol" />
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
-        android:text="Player Creation"
+        android:text="@string/create1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSigninHelp3" />
 
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="1) Click on the button to add a new player."
+        android:text="@string/create2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerCreateHelp1" />
 
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="2) Click on the oblect in the database to update it."
+        android:text="@string/create3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerCreateHelp2" />
 
@@ -69,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="3) Click on the delete button to remove the object."
+        android:text="@string/create4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerCreateHelp3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

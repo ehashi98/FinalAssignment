@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mashruuca u dambeeya</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">" Hello jajab maran"</string>
+    <string name="hello_message">Salaamu Calaykum</string>
+    <string name="Sign_in1">Soo gal Caawin</string>
+    <string name="Sign_in2">1) Guji badhanka soo galitaanka</string>
+    <string name="Sign_in3">2) Geli magaca iimaylka iyo furaha sirta ah ee leh ugu yaraan 1 xaraf weyn, 1 xaraf yar, 1 lambar, iyo 1 calaamad.</string>
+
+    <string name="create1">Abuurista Ciyaartoyga</string>
+    <string name="create2">1) Guji badhanka si aad ugu darto ciyaaryahan cusub. .</string>
+    <string name="create3">2) Guji oblect-ka ku jira keydka macluumaadka si aad u cusbooneysiiso.</string>
+    <string name="create4">3) Guji badhanka tirtirka si aad uga saarto shayga.</string>
+</resources>
