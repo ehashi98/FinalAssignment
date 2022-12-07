@@ -53,7 +53,7 @@ public class PexelsActivity extends AppCompatActivity {
     RequestQueue queue;
 
     /**
-     * Creates an options meny
+     * Creates an options menu
      *
      * @param menu the mmenu to create
      * @return boolean true
@@ -200,12 +200,10 @@ public class PexelsActivity extends AppCompatActivity {
                 Log.d("test", "ohoh");
             }
 
-        }, (error) -> {
-            Log.e("Error", "error");
-        }) {
+        }, (error) -> Log.e("Error", "error")) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
                 params.put("Authorization", "563492ad6f9170000100000191ad29580c3f41adb3f5cf994b22bb92");
                 return params;
             }

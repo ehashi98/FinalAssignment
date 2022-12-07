@@ -31,7 +31,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:hint="Enter Search Here"
+                android:hint="@string/enter_search_here"
+                android:autofillHints=""
+                android:inputType="textAutoCorrect"
                 app:layout_constraintEnd_toStartOf="@+id/button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -40,8 +42,8 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text="Search"
+                android:layout_gravity="end"
+                android:text="@string/search"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
