@@ -1,5 +1,11 @@
 package algonquin.cst2335.ticketmaster.ui;
-
+/**Course: 22F-CST2335-021
+        Professor: Adewole Adewumi
+        Author: Kamelia Pezeshki
+        student# 040844200
+        File name: drawer_menu.xml
+        Date: 2022-12-06
+        Final Project*/
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -56,15 +62,23 @@ public class EventDetailsFragment extends Fragment {
 
     @Nullable
     @Override
+    /**@param inflater object
+     *This is onCreateView where all the data is saved.
+     */
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         EventDetailsBinding binding = EventDetailsBinding.inflate(inflater);
-
+/**
+ * Getter and setter method.
+ */
         String imgUrl = selected.getImgUrl();
         binding.eventName.setText(selected.getName());
         @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
         SimpleDateFormat newFormat = new SimpleDateFormat("h:mm a EEE    MMM dd, yyyy");
         newFormat.setTimeZone(TimeZone.getDefault());
+        /**
+         * try and catch the method to get the activity by the event database.
+         */
         try {
             binding.eventDate.setText(newFormat.format(format.parse(selected.getDate())));
         } catch (ParseException e) {
@@ -140,6 +154,9 @@ public class EventDetailsFragment extends Fragment {
                 Executor thread = Executors.newSingleThreadExecutor();
                 thread.execute(() -> {
                     selected.setSaved(true);
+                    /**
+                     * Try and catch method to save the data in the favourite list.
+                     */
                     try {
                         int rowAffected = (int)eventDAO.insertEvent(selected);
                         FileOutputStream fOUt = null;
@@ -155,10 +172,16 @@ public class EventDetailsFragment extends Fragment {
                                 Toast.makeText(this.getActivity(), R.string.failed_to_save, Toast.LENGTH_SHORT).show();
                             }
                         });
+                        /**
+                         * Using the catch method to the activity
+                         */
                     } catch (SQLiteConstraintException e) {
                         getActivity().runOnUiThread(() -> {
                             Toast.makeText(this.getActivity(), R.string.event_exists, Toast.LENGTH_SHORT).show();
                         });
+                        /**
+                         * Using the catch method to print the data.
+                         */
                     }catch (FileNotFoundException e) {
                         e.printStackTrace();
                     } catch (IOException e) {

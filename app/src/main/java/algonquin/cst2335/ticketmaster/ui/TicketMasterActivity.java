@@ -53,7 +53,14 @@ import algonquin.cst2335.ticketmaster.data.EventDAO;
 import algonquin.cst2335.ticketmaster.data.EventDatabase;
 import algonquin.cst2335.ticketmaster.databinding.ActivityTicketMasterBinding;
 import algonquin.cst2335.ticketmaster.databinding.EventBinding;
+
+
+/**
+ * @author kamelia
+ * @version 1.0
+ */
 public class TicketMasterActivity extends AppCompatActivity {
+
 
     private ActivityTicketMasterBinding binding;
     private EventViewModel eventModel;
@@ -69,24 +76,36 @@ public class TicketMasterActivity extends AppCompatActivity {
     String api;
     SharedPreferences prefs;
     @Override
+    /**
+     * This onCreate method will set the content view.
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityTicketMasterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
-
+/**
+ * set title using with the actionbar.
+ */
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.ticket_master_name));
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-
+/**
+ * Using the database to store the data.
+ */
 
         db = Room.databaseBuilder(getApplicationContext(), EventDatabase.class, "EventDatabase").build();
         eventDAO = db.eventDAO();
 
         eventModel = new ViewModelProvider(this).get(EventViewModel.class);
         queue = Volley.newRequestQueue(this);
+
+        /**
+         * This is SetOnClickListener where user can put the city, radius.
+         * Also is radius is greater then the value it will give you the toast message.
+         */
 
         binding.searchButton.setOnClickListener(click -> {
             String cityInput = binding.citySearch.getText().toString();
@@ -110,6 +129,9 @@ public class TicketMasterActivity extends AppCompatActivity {
             }
 
         });
+        /**
+         * This is the onCreateViewHolder to get the value types.
+         */
 
         myAdaptor = new RecyclerView.Adapter<MyRowHolder>() {
             @NonNull
@@ -120,6 +142,9 @@ public class TicketMasterActivity extends AppCompatActivity {
             }
 
             @Override
+            /**
+             * This is onBindViewHolder to set the set text about the month, year and time.
+             */
             public void onBindViewHolder(@NonNull MyRowHolder holder, int position) {
                 holder.eventDateText.setText("");
                 holder.eventNameText.setText("");
@@ -185,6 +210,9 @@ public class TicketMasterActivity extends AppCompatActivity {
     }
 
     @Override
+    /**
+     * onPause method is use to  for cityName, Radius and apiPrefix.
+     */
     protected void onPause() {
         super.onPause();
         SharedPreferences.Editor editor = prefs.edit();
@@ -193,6 +221,10 @@ public class TicketMasterActivity extends AppCompatActivity {
         editor.putInt("radius", radius);
         editor.apply();
     }
+
+    /**
+     * onStart method is use for the the api.
+     */
 
     @Override
     protected void onStart() {
@@ -206,6 +238,9 @@ public class TicketMasterActivity extends AppCompatActivity {
     }
 
     @Override
+    /**
+     * onCreateOpations menu use for the menu option.
+     */
     public boolean onCreateOptionsMenu(@NonNull Menu menu){
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -215,6 +250,9 @@ public class TicketMasterActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @SuppressLint({"NotifyDataSetChanged", "NonConstantResourceId", "SetTextI18n"})
     @Override
+    /**
+     * Using the Switch case for the menu item.
+     */
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -260,6 +298,11 @@ public class TicketMasterActivity extends AppCompatActivity {
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
+    /**
+     *
+     * @param cityName value is in the string
+     * @param radius value is in int
+     */
     private void search(String cityName, int radius) {
         eventsList.clear();
         try {

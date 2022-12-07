@@ -6,8 +6,15 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
+/**
+ * This is the database class where the information of the data will be printed in the string.
+ * @author kamelia
+ * @version 1.0
+ */
 @Entity
 public class Event {
+
 
     @PrimaryKey
     @NonNull
