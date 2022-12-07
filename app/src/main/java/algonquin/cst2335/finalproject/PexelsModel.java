@@ -1,21 +1,35 @@
 package algonquin.cst2335.finalproject;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class PexelsModel {
+
+    @PrimaryKey()
+    @ColumnInfo(name = "id")
     protected int id;
+
+    @ColumnInfo(name = "width")
     protected int width;
+
+    @ColumnInfo(name = "height")
     protected int height;
+
+    @ColumnInfo(name = "url")
     protected String url;
+
+    @ColumnInfo(name = "photographer")
     protected String photographer;
+
+    @ColumnInfo(name = "imgThumbnail")
     protected String imgThumbnail;
+
+    @ColumnInfo(name = "originalImg")
     protected String originalImg;
 
-    public String getOriginalImg() {
-        return originalImg;
-    }
-
-    public void setOriginalImg(String originalImg) {
-        this.originalImg = originalImg;
-    }
+    public PexelsModel() {}
 
     public int getId() {
         return id;
@@ -64,4 +78,13 @@ public class PexelsModel {
     public void setImgThumbnail(String imgThumbnail) {
         this.imgThumbnail = imgThumbnail;
     }
+
+    public String getOriginalImg() {
+        return originalImg;
+    }
+
+    public void setOriginalImg(String originalImg) {
+        this.originalImg = originalImg;
+    }
+
 }

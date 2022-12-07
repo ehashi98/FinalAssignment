@@ -11,11 +11,11 @@ import java.util.List;
 public interface PexelsSavedDAO {
 
     @Insert
-    void saveImage(PexelsSaved img);
+    void saveImage(PexelsModel img);
 
-    @Query("Select * from PexelsSaved")
-    List<PexelsSaved> getAllImages();
+    @Query("Select * from PexelsModel")
+    List<PexelsModel> getAllImages();
 
     @Delete
-    void deleteImage(PexelsSaved img);
+    void deleteImage(PexelsModel img);
 }

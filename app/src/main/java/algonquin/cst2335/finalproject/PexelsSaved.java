@@ -1,4 +1,4 @@
-package algonquin.cst2335.finalproject;
+/*package algonquin.cst2335.finalproject;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -14,11 +14,10 @@ public class PexelsSaved {
     @ColumnInfo(name = "width")
     protected int width;
 
-    @ColumnInfo(name = "width")
-
+    @ColumnInfo(name = "height")
     protected int height;
 
-    @ColumnInfo(name = "width")
+    @ColumnInfo(name = "url")
     protected String url;
 
     @ColumnInfo(name = "photographer")
@@ -87,4 +86,5 @@ public class PexelsSaved {
     public void setOriginalImg(String originalImg) {
         this.originalImg = originalImg;
     }
-}
+
+}*/
