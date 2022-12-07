@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="pexel"
+        android:id="@+id/pexel"
+        app:showAsAction="never"
+        />
+    <item android:title="movie"
+        android:id="@+id/movie"
+        app:showAsAction="never"
+        />
+    <item android:title="ticket"
+        android:id="@+id/ticket"
+        app:showAsAction="never"
+        />
+    <item android:title="soccer"
+        android:id="@+id/soccer"
+        app:showAsAction="never"
+        />
+
+</menu>

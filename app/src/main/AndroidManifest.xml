@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalGroupProjectApplication"
+        android:theme="@style/Theme.TicketMaster"
         tools:targetApi="31">
 
         <activity
@@ -27,6 +29,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:name="View.MovieLib"
@@ -45,16 +48,24 @@
         </activity>
         <activity
             android:name=".PexelsActivity"
+            android:name=".TicketHomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TicketMasterActivity"
+            android:exported="true">
+            <intent-filter>
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                <action android:name="com.dsociety.activities.MyBrowser" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
         </activity>
 
         <activity android:name=".loginActivity" />
@@ -67,6 +78,6 @@
             android:parentActivityName=".databaseActivity" />
 
 
-    </application>
 
+    </application>
 </manifest>

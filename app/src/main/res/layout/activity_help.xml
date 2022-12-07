@@ -12,6 +12,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/Sign_in1"
+        android:text="Sign in Help"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Sign in Help" />
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/Sign_in2"
+        android:text="1) Click on the SIgn-in button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSigninHelp1"
         tools:text="1) Click on the SIgn-in button" />
@@ -72,4 +74,8 @@
         android:text="@string/create4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerCreateHelp3" />
+        android:text="2) Enter an Email name and a password with at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSigninHelp2"
+        tools:text="2) Enter an Email name and a password with at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 symbol" />
 </androidx.constraintlayout.widget.ConstraintLayout>

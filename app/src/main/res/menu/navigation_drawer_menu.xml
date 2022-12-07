@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/homepage"
+            android:icon="@drawable/homepage"
+            android:title="@string/homepage" />
+
+        <item
+            android:id="@+id/ticketmaster"
+            android:icon="@drawable/ticketmaster"
+            android:title="@string/ticket_master_name" />
+
+
+
+    </group>
+</menu>
