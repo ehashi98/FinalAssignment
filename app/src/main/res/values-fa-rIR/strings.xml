@@ -38,4 +38,36 @@
     <string name="helpMessage">شهر و فاصله مورد نظر خود را انتخاب کنید..%nمناسبت مورد نظر را انتخاب کنید.%nنظرتون رو پر مورد مناسبت انتخابی عوض کردید؟ نگران نباشید دکمه حذف برای کمک به شما تعبیه شده.</string>
 
     <string name="homepage">صفحه اصلی</string>
+    <string name="help_title">نحوه کارکرد</string>
+    <string name="howto_message">به اپلیکیشن فیلم خوش آمدید!</string>
+    <string name="lib_help_title">کمک:</string>
+    <string name="open">باز کرد</string>
+    <string name="details">اطلاعات</string>
+    <string name="MovieMainPageHeader">خوش آمدید</string>
+    <string name="MovieSearch">جستجو</string>
+    <string name="ToMovieList">ذخیره فیلم</string>
+    <string name="released">انتشار در :</string>
+    <string name="runtime">زمان پخش</string>
+    <string name="cast">هنرپیشه</string>
+    <string name="hello_blank_fragment">سلام خالی</string>
+    <string name="hello_message">سلام دنیا</string>
+    <string name="Sign_in1">کمک ورود</string>
+    <string name="app_nameTicket">CST2335پروژه تیکت مستر</string>
+    <string name="aboutImg">درباره</string>
+    <string name="saved_images">ذخیره عکس</string>
+    <string name="image_thumbnail">عکس</string>
+    <string name="saveImg">ذخیره</string>
+    <string name="searchImg">جستجو</string>
+    <string name="enter_search_here">جستجو را وارد کنید</string>
+    <string name="aboutMovie">درباره</string>
+    <string name="searchMovie">جستجو</string>
+    <string name="removeMovie">پاک کردن</string>
+    <string name="saveMovie">ذخیره</string>
+    <string name="create4">3) دکمه پاک کردن را فشار دهید</string>
+    <string name="Sign_in2">1) دکمه ورود را فشار دهید</string>
+    <string name="Sign_in3">2) آدرس ایمیل و رمز عبور خود را واردکنید</string>
+    <string name="create1">بازیکنان</string>
+    <string name="create2">1) دکمه را برای اضافه کردن بازیکن فشار دهید</string>
+    <string name="create3">2) دکمه را برای آپدیت دیتا بیس فشار دهید</string>
+    <string name="plot">زمین</string>
 </resources>

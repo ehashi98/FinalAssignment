@@ -31,7 +31,7 @@ public class SoccerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.soccer_main_activity);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -72,27 +72,27 @@ public class SoccerActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1:
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = new Intent(SoccerActivity.this, SoccerActivity.class);
                 startActivity(intent);
                 return true;
 
             case R.id.item2:
-                Intent intent2 = new Intent(MainActivity.this, fragmentActivityPage.class);
+                Intent intent2 = new Intent(SoccerActivity.this, fragmentActivityPage.class);
                 startActivity(intent2);
                 return true;
 
             case R.id.item3:
-                Intent intent3 = new Intent(MainActivity.this, helpActivity.class);
+                Intent intent3 = new Intent(SoccerActivity.this, helpActivity.class);
                 startActivity(intent3);
                 return true;
 
             case R.id.item4:
-                Intent intent4 = new Intent(MainActivity.this, volleyActivity.class);
+                Intent intent4 = new Intent(SoccerActivity.this, volleyActivity.class);
                 startActivity(intent4);
                 return true;
 
             case R.id.item5:
-                Intent intent5 = new Intent(MainActivity.this, databaseActivity.class);
+                Intent intent5 = new Intent(SoccerActivity.this, databaseActivity.class);
                 startActivity(intent5);
                 return true;
             default:

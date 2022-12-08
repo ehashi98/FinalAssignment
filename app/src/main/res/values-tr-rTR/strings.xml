@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Final Grup Proje App</string>
-    <string name="dialog_message">Kapatmak istiyor musun?</string>
     <string name="help_title">Nasıl Çalışıyor?</string>
     <string name="howto_message">Hoşgeldiniz! \n\nKolayca aradığınız filmi yazın ve butona basın.
     \n\nAradığınız filmi listenize ekleyip, listenize ve film detaylarına + butonuna basarak ulaşın.</string>
@@ -19,8 +18,7 @@
     <string name="open">Aç</string>
     <string name="close">kapat</string>
     <string name="author">Yazar:</string>
-    <string name="details">Detay
-    \nSayfası</string>
+    <string name="details">Detay Sayfası</string>
 
     <string name="save">kaydet</string>
     <string name="remove">çıkar</string>
@@ -37,4 +35,47 @@
 
 
     <string name="about">Hakkında</string>
+    <string name="ticket_master_name">Ticket Master Uygulamasına Hoşgeldiniz</string>
+    <string name="radius_km">km</string>
+    <string name="city">Şehir</string>
+    <string name="name">ad</string>
+    <string name="date">tarih</string>
+    <string name="event_name">etkinlik adı</string>
+    <string name="event_date">etkinlik tarihi</string>
+    <string name="event_venue">etkinlik yeri</string>
+    <string name="ticket_price">bilet ücreti</string>
+    <string name="buy_ticket">Bilet Al</string>
+    <string name="show_result">Etkinlikler %s aralıkta %d kmde</string>
+    <string name="no_result">Sonuç yok %s aralıkta %d kmde</string>
+    <string name="invalid_city">Lütfen şehir girin</string>
+    <string name="no_radius">Lütfen yarıçap girin</string>
+    <string name="zero_radius">Yarıçapın 0\'dan büyük olması gerekiyor!</string>
+    <string name="delete_warning">Bu etkinliği silmek istiyor musunuz?</string>
+    <string name="deleted_message">Bu etkiniği sildiniz: %s</string>
+    <string name="show_favorite">Favori listeniz:</string>
+    <string name="saved_to_favorite">Favori listesine kayıt edildi!</string>
+    <string name="failed_to_save">Etkinlik kaydedilemedi! Lütfen tekrar deneyin.</string>
+    <string name="event_exists">Bu etkinlik zaten favori listesinde</string>
+    <string name="question">Soru:</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="undo">Geri Al</string>
+    <string name="drawer_open">D Açık</string>
+    <string name="drawer_close">D Kapalı</string>
+    <string name="time">saat</string>
+    <string name="eventAddress">etkinlik yeri</string>
+    <string name="ok">tamam</string>
+    <string name="Usage">Kullanım</string>
+    <string name="helpMessage">Şehir girin be mesafe girin aradığınız yeri bulmak için.</string>
+    <string name="homepage">Ana Sayfa\'ya Hoşgeldiniz</string>
+    <string name="save_movie">kaydet</string>
+    <string name="remove_movie">çıkart</string>
+    <string name="searchMovie">ara</string>
+    <string name="aboutProj">Hakkında</string>
+    <string name="enter_search">Aramayı buraya gir</string>
+    <string name="searchImg">Ara</string>
+    <string name="saveImg">Kaydet</string>
+    <string name="image_thumbnail">Resim küçükresim</string>
+    <string name="saved_images">Kaydedilen Resimler</string>
+    <string name="page_name">CST2335 Ticket Master Projesi</string>
 </resources>

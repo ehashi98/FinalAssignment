@@ -29,7 +29,6 @@ public class TicketHomeActivity extends NavigationDrawer {
         setActivityTitle("Homepage");
         setContentView(activityTickethomeBinding.getRoot());
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
     }
 
     @Override

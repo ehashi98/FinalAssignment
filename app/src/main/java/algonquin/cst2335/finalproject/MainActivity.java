@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import View.SearchMovie;
 
-public class SoccerActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 

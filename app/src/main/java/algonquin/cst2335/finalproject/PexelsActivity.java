@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +42,8 @@ import algonquin.cst2335.finalproject.databinding.ResultsActivityBinding;
 
 public class PexelsActivity extends AppCompatActivity {
 
+    Toolbar toolbar;
+
     PexelsActivityBinding binding;
 
     PexelsViewModel pexelsModel;
@@ -54,6 +57,7 @@ public class PexelsActivity extends AppCompatActivity {
     String searchQuery;
 
     RequestQueue queue;
+
 
     /**
      * Creates an options menu
@@ -124,6 +128,13 @@ public class PexelsActivity extends AppCompatActivity {
 
         pexelsModel = new ViewModelProvider(this).get(PexelsViewModel.class);
         pexelsResults = pexelsModel.pexelsResults.getValue();
+
+        this.toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(this.toolbar);
+
+        Toolbar supportToolbar = (Toolbar)findViewById(R.id.home_toolbar);
+        setSupportActionBar(supportToolbar);
+
 
         recyclerView = binding.recycleView;
         if (pexelsResults == null) {
